@@ -1,0 +1,432 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+*,
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-family: "Poppins", sans-serif;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* DESKTOP */
+@media (min-width: 90rem) {
+  /*1440px*/
+  .wrapper {
+    max-width: 75rem; /*1200px*/
+    margin-inline: auto;
+  }
+}
+
+/* LAPTOP */
+@media (max-width: 90rem) {
+  /*1440px*/
+  .wrapper {
+    max-width: 75rem; /*1200px*/
+    margin-inline: auto;
+    padding: 0px 3.1rem;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 37.5rem) {
+  /*600px*/
+  .wrapper {
+    width: 100%;
+    margin-inline: auto;
+    padding: 0px 0.7rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.2rem + 3vw, 4rem);
+}
+
+h3 {
+  font-size: 1.375rem;
+  font-size: clamp(1.3rem, 0.9rem + 1.7vw, 2.5rem);
+}
+
+h4{
+  font-size: 1.37rem;
+}
+
+p {
+  font-size: 0.87rem; /*14px*/
+}
+
+:root {
+  --dark-orange: #ff5600;
+  --mid-orange: #f86061;
+  --light-orange: #fef5f5;
+  --black: #2e2e2e;
+  --green: #03A66B;
+  --yellow: #F9BA45;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+.fw-600{
+  font-weight: 600;
+}
+.fw-500{
+  font-weight: 500;
+}
+h1,
+h3 {
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+
+span {
+  color: var(--dark-orange);
+}
+
+.fill-orange-btn {
+  background-color: var(--mid-orange);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+}
+
+.outline-btn {
+  background-color: transparent;
+  border: 1px solid var(--mid-orange);;
+  padding: 10px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: var(--mid-orange);
+}
+
+
+
+/* Flex */
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.work-sans{
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* ------ Global Ends Here ------- */
+
+/* header section starts herer */
+header nav {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  height: 4.3rem; /* 70px */
+  z-index: 100;
+}
+header nav .logo img {
+  height: 2.5rem; /*70px*/
+}
+header nav .menu ul li {
+  margin-right: 20px;
+}
+header nav .menu a {
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
+}
+header nav .menu a:hover {
+  font-weight: 600;
+  color: var(--mid-orange);
+}
+header nav .search__bar {
+  position: relative;
+  box-shadow: 0px 20px 50px 0px #0000000a;
+  border-radius: 5px;
+}
+header nav .search__bar input {
+  border: none;
+  padding: 10px 20px;
+  color: var(--black);
+  outline: none;
+}
+header nav .search__bar .add_to_cart {
+  height: 18px;
+  border-left: 1.5px solid #f2f2f2;
+  padding-left: 10px;
+}
+
+@media (max-width: 53.7rem) {
+  /*860px*/
+  header nav .menu {
+    display: none;
+  }
+}
+
+@media (max-width: 33.7rem) {
+  /*540px*/
+  header nav .search__bar {
+    display: none;
+  }
+}
+
+/* Main banner */
+header .main__banner {
+  height: 90vh;
+}
+header .main__banner .secure-growth {
+  background-color: var(--light-orange);
+  padding: 4px 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: underline;
+}
+header .main__banner .banner__img {
+  height: 12.5rem;
+  height: clamp(12.5rem, 3.9rem + 42.6vw, 32rem);
+}
+
+/* Header section Ends here */
+
+
+/* Serve Section Starts */
+.serve__section{
+  background-color: var(--light-orange);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.serve__section .text{
+   text-align: center;
+}
+.serve__section .text p{
+  color: var(--mid-orange);
+}
+.serve__section .plateform__section{
+  gap: 50px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+.serve__section .plateform__section .box{
+  background-color: white;
+  height: 310px;
+  width: 300px;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.serve__section .plateform__section .free__ship,
+.serve__section .plateform__section .return,
+.serve__section .plateform__section .secure__checkout{
+   position: relative;
+   z-index: 5;
+}
+.serve__section .plateform__section .hover{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  width: 300px;
+  border-radius: 12px;
+  background-color: var(--mid-orange);
+  transform-origin: top left;
+  
+}
+
+.serve__section .plateform__section .free__ship:hover .hover,
+.serve__section .plateform__section .return:hover .hover,
+.serve__section .plateform__section .secure__checkout:hover .hover{
+   transform: rotate(-5deg);
+   transition: all 0.4s ease-in;
+   height: 340px;
+}
+.serve__section .plateform__section .hover:hover {
+  transform: rotate(-5deg);
+}
+
+
+
+
+
+/* integrate Section starts here */
+.integrate{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.integrate .left{
+  width: 40%;
+
+}
+
+.integrate .right img{
+  height: 25rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Overview Section Starts */
+.overview{
+  background-color: var(--light-orange);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.overview .row{
+  margin-top: 30px;
+}
+.overview .row .left img{
+  height: 25rem;
+}
+.overview .row .right{
+  width: 35%;
+  margin-left: 40px;
+}
+.overview .row .learn__more{
+   color: rgb(12, 12, 172);
+   width: 150px;
+}
+.overview .row .learn__more span{
+   color: rgb(12, 12, 172);
+}
+.overview .row .learn__more:hover img{
+  padding-left: 4px;
+  transition: 0.2s ease-in-out;
+}
+
+/* Find-Fav starts here */
+.find__fav{
+  justify-content: space-around;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.find__fav .green{
+  color: var(--green);
+}
+
+
+/* details starts Here */
+.details{
+  padding-top: 40px;
+  padding-bottom: 70px;
+}
+.details .yellow{
+  color: var(--yellow);
+}
+.details .left{
+  width: 45%;
+}
+.details .right img{
+  height: 30rem;
+}
+
+
+/* download-app starts here  */
+.download__app{
+  background-color: var(--light-orange);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.download__app .wrapper{
+  justify-content: space-around;
+}
+.download__app .right{
+  width: 45%;
+}
+.download__app .orange{
+  color: var(--mid-orange);
+}
+
+.download__btn button{
+  background-color: white;
+  border: 1px solid rgb(189, 189, 189);
+  padding: 10px 25px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.download__btn button span{
+  color: var(--black);
+}
+
+
+/* Footer Start here */
+.footer__section{
+  padding-top: 70px;
+  padding-bottom: 70px;
+  flex-wrap: wrap;
+}
+.footer__section .logo{
+  width: 20%;
+  color: #676767;
+}
+
+.footer__section .get__in__touch{
+  width: 20%;
+}
+.footer__section .get__in__touch span{
+ color: #676767;
+ font-size: 14px;
+}
+
+.footer__section .company,
+.footer__section .service,
+.footer__section .get__in__touch{
+  display: flex;
+  flex-direction: column;
+}
+.footer__section a{
+  line-height: 2;
+  font-size: 14px;
+  color: #676767;
+  font-weight: 400;
+}
+
+
+.terms__condition{
+  border-top: 1px solid rgb(227, 227, 227);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 14px;
+  color: #8C8C8C;
+  flex-wrap: wrap;
+}
+.terms__condition a{
+   color: #8C8C8C;
+}
